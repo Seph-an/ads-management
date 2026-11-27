@@ -1,0 +1,14 @@
+{
+  "name": "ads-management",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/order-inbox.jsx --bundle --minify --jsx=automatic --target=es2019 --legal-comments=eof --outfile=assets/order-inbox.js"
+  },
+  "dependencies": {
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

@@ -14,6 +14,7 @@
 </script>
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="order-inbox.css">
 <script src="app.js" defer></script>
 <script type="application/ld+json">
 {
@@ -79,7 +80,7 @@
   </section>
   <section class="example-band" id="example">
     <div class="shell section example-grid">
-      <div>
+      <div class="example-intro">
         <p class="eyebrow">ADS IN PRACTICE</p>
         <h2>See what your ad money brought in.</h2>
         <p class="section-intro">A solar installer may want calls and site visits. A solar equipment shop may want more online orders. Switch between the examples to see what we’d track and what we’d change next.</p>
@@ -113,6 +114,58 @@
           </div>
         </div>
         <figcaption aria-live="polite"><div><strong>What we’d do next</strong><p id="decision">Put more of the budget into the Facebook or Instagram ad that brings in orders at a lower cost. Set aside a little to try a new ad.</p></div></figcaption>
+      </figure>
+      <figure class="order-demo" aria-labelledby="order-demo-title">
+        <figcaption class="order-demo-caption">
+          <h3 id="order-demo-title">Orders coming in on WhatsApp</h3>
+          <p>A sample inbox for a Nairobi solar shop.</p>
+        </figcaption>
+        <div class="order-demo-stage">
+          <div class="order-phone">
+            <div class="order-phone-screen">
+              <div class="order-phone-status" aria-hidden="true">
+                <span>9:41</span><span class="order-phone-camera"></span>
+                <span class="order-phone-indicators"><i></i><i></i><i></i></span>
+              </div>
+              <div class="order-phone-header">
+                <span class="order-phone-avatar" aria-hidden="true"><i></i></span>
+                <div><strong>Solar shop</strong><span>Order inbox</span></div>
+              </div>
+              <div class="order-inbox" id="order-inbox" data-script="assets/order-inbox.js">
+                <div class="order-inbox-summary"><span>All orders</span></div>
+                <ul class="order-inbox-rows" aria-label="Sample order conversations">
+                  <li class="order-inbox-row" data-tone="mint">
+                    <span class="order-inbox-avatar" aria-hidden="true">AO</span>
+                    <div class="order-inbox-message"><strong>Amina O.</strong><span>Do you deliver to Kilimani?</span></div>
+                    <div class="order-inbox-meta"><time datetime="09:40">9:40</time></div>
+                  </li>
+                  <li class="order-inbox-row" data-tone="violet">
+                    <span class="order-inbox-avatar" aria-hidden="true">WK</span>
+                    <div class="order-inbox-message"><strong>Wanjiku K.</strong><span>Thanks, I’ll collect tomorrow.</span></div>
+                    <div class="order-inbox-meta"><time datetime="09:37">9:37</time></div>
+                  </li>
+                  <li class="order-inbox-row" data-tone="blue">
+                    <span class="order-inbox-avatar" aria-hidden="true">KM</span>
+                    <div class="order-inbox-message"><strong>Kamau M.</strong><span>Can I pay via M-Pesa?</span></div>
+                    <div class="order-inbox-meta"><time datetime="09:33">9:33</time></div>
+                  </li>
+                  <li class="order-inbox-row" data-tone="rose">
+                    <span class="order-inbox-avatar" aria-hidden="true">GN</span>
+                    <div class="order-inbox-message"><strong>Grace N.</strong><span>Please send the receipt.</span></div>
+                    <div class="order-inbox-meta"><time datetime="09:28">9:28</time></div>
+                  </li>
+                  <li class="order-inbox-row" data-tone="sand">
+                    <span class="order-inbox-avatar" aria-hidden="true">BK</span>
+                    <div class="order-inbox-message"><strong>Brian K.</strong><span>Got it, thanks!</span></div>
+                    <div class="order-inbox-meta"><time datetime="09:24">9:24</time></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="order-phone-home" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+        <div class="order-demo-controls" id="order-demo-controls"></div>
       </figure>
     </div>
   </section>
@@ -187,7 +240,15 @@
     </div>
   </section>
   <section class="brief" id="brief"><div class="shell section brief-grid">
-    <div><p class="eyebrow">GET STARTED</p><h2>Tell us about <em>your business.</em></h2><p>Start a WhatsApp chat or email us with what you sell, where your customers are, and what you can set aside for ads. We’ll discuss which ads make sense and send a quote in Kenyan shillings before any work starts.</p><div class="contact-links"><a class="button outline" id="whatsapp-contact" href="https://wa.me/254701053934">WhatsApp 0701 053 934</a><a class="text-link" href="mailto:hello@sephanly.com?subject=Nairobi%20ads%20management%20enquiry">hello@sephanly.com</a></div></div>
+    <div><p class="eyebrow">GET STARTED</p><h2>Tell us about <em>your business.</em></h2><p>Start a WhatsApp chat or email us with what you sell, where your customers are, and what you can set aside for ads. We’ll discuss which ads make sense and send a quote in Kenyan shillings before any work starts.</p>
+      <div class="contact-links">
+        <div class="contact-number">
+          <a class="button outline" id="whatsapp-contact" href="https://wa.me/254701053934" aria-label="WhatsApp 0701 053 934">WhatsApp</a>
+          <a class="button outline" href="tel:+254701053934">or call 0701 053 934</a>
+        </div>
+        <a class="text-link" href="mailto:hello@sephanly.com?subject=Nairobi%20ads%20management%20enquiry">hello@sephanly.com</a>
+      </div>
+    </div>
     <form id="brief-form">
       <p>Fill in the details below to prepare your WhatsApp message.</p>
       <label for="business">What do you sell?</label><input id="business" name="business" maxlength="160" placeholder="For example, solar inverters or installation services" required>

@@ -10,7 +10,16 @@ Open `index.html` directly or serve the directory over HTTP.
 python3 -m http.server 3000 --bind 127.0.0.1
 ```
 
-Then open http://localhost:3000. No build step or dependencies are required.
+Then open http://localhost:3000. The static page includes a prebuilt React bundle, so preview and hosting require no installation or build.
+
+## Order inbox demo
+
+Edit the example messages and playback in `src/order-inbox.jsx` and the phone styling in `order-inbox.css`. Rebuild `assets/order-inbox.js` after editing the React source and commit the refreshed bundle with the source changes.
+
+```sh
+npm ci
+npm run build
+```
 
 ## Search indexing
 

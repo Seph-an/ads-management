@@ -72,7 +72,21 @@ for (const button of channels) {
 
 document.querySelector(".hero-results a").addEventListener("click", () => showExample("meta"));
 
+const orderInbox = document.getElementById("order-inbox");
+function loadOrderInbox() {
+  const script = document.createElement("script");
+  script.src = orderInbox.dataset.script;
+  document.head.append(script);
+}
+
 if ("IntersectionObserver" in window) {
+  const preload = new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) return;
+    preload.disconnect();
+    loadOrderInbox();
+  }, { rootMargin: "500px" });
+  preload.observe(orderInbox);
+
   const reveal = new IntersectionObserver((entries, observer) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
@@ -81,6 +95,8 @@ if ("IntersectionObserver" in window) {
     }
   }, { threshold: 0.15 });
   document.querySelectorAll("[data-reveal]").forEach((element) => reveal.observe(element));
+} else {
+  loadOrderInbox();
 }
 
 const form = document.getElementById("brief-form");
