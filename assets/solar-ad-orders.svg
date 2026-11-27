@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 224">
+  <rect width="360" height="224" fill="#fff"/>
+  <g font-family="system-ui, sans-serif">
+    <text x="16" y="26" fill="#47516a" font-size="15">Meta Ads example</text>
+    <text x="16" y="58" fill="#171f3b" font-size="25" font-weight="700">100 orders</text>
+    <text x="344" y="56" text-anchor="end" fill="#47516a" font-size="15">Over 4 weeks</text>
+    <path d="M16 77H344M16 106H344M16 135H344M16 164H344M16 193H344" stroke="#dce3f4"/>
+    <g fill="#2a43aa">
+      <rect x="32" y="138" width="52" height="55" rx="4"/>
+      <rect x="112" y="122" width="52" height="71" rx="4"/>
+      <rect x="192" y="103" width="52" height="90" rx="4"/>
+      <rect x="272" y="87" width="52" height="106" rx="4"/>
+    </g>
+    <g fill="white" font-size="15" font-weight="700" text-anchor="middle">
+      <text x="58" y="159">17</text>
+      <text x="138" y="143">22</text>
+      <text x="218" y="124">28</text>
+      <text x="298" y="108">33</text>
+    </g>
+    <g fill="#47516a" font-size="14" text-anchor="middle">
+      <text x="58" y="214">Week 1</text>
+      <text x="138" y="214">Week 2</text>
+      <text x="218" y="214">Week 3</text>
+      <text x="298" y="214">Week 4</text>
+    </g>
+  </g>
+</svg>
