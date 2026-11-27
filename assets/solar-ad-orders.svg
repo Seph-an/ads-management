@@ -2,7 +2,7 @@
   <rect width="360" height="224" fill="#fff"/>
   <g font-family="system-ui, sans-serif">
     <text x="16" y="26" fill="#47516a" font-size="15">Meta Ads example</text>
-    <text x="16" y="58" fill="#171f3b" font-size="25" font-weight="700">100 orders</text>
+    <text x="16" y="58" fill="#171f3b" font-size="25" font-weight="700">1,000 orders</text>
     <text x="344" y="56" text-anchor="end" fill="#47516a" font-size="15">Over 4 weeks</text>
     <path d="M16 77H344M16 106H344M16 135H344M16 164H344M16 193H344" stroke="#dce3f4"/>
     <g fill="#2a43aa">
@@ -12,10 +12,10 @@
       <rect x="272" y="87" width="52" height="106" rx="4"/>
     </g>
     <g fill="white" font-size="15" font-weight="700" text-anchor="middle">
-      <text x="58" y="159">17</text>
-      <text x="138" y="143">22</text>
-      <text x="218" y="124">28</text>
-      <text x="298" y="108">33</text>
+      <text x="58" y="159">170</text>
+      <text x="138" y="143">220</text>
+      <text x="218" y="124">280</text>
+      <text x="298" y="108">330</text>
     </g>
     <g fill="#47516a" font-size="14" text-anchor="middle">
       <text x="58" y="214">Week 1</text>

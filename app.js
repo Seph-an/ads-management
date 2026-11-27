@@ -22,18 +22,18 @@ window.matchMedia("(min-width: 44rem)").addEventListener("change", () => setMenu
 
 const examples = {
   meta: {
-    spend: "KSh 38,400", result: "100", cost: "KSh 384",
+    spend: "KSh 384,000", result: "1,000", cost: "KSh 384",
     resultLabel: "Orders", costLabel: "Cost per order",
-    chartLabel: "Orders by week", weeks: [17, 22, 28, 33],
-    salesLabel: "Sales from 100 orders", sales: "KSh 480,000",
-    directCostLabel: "Cost of goods and delivery", directCost: "− KSh 350,000",
-    remainder: "KSh 71,600",
+    chartLabel: "Orders by week", weeks: [170, 220, 280, 330], chartMax: 400,
+    salesLabel: "Sales from 1,000 orders", sales: "KSh 4,800,000",
+    directCostLabel: "Cost of goods and delivery", directCost: "− KSh 3,500,000",
+    remainder: "KSh 896,000",
     decision: "Put more of the budget into the Facebook or Instagram ad that brings in orders at a lower cost. Set aside a little to try a new ad.",
   },
   google: {
     spend: "KSh 32,000", result: "64", cost: "KSh 500",
     resultLabel: "Sales enquiries", costLabel: "Cost per enquiry",
-    chartLabel: "Sales enquiries by week", weeks: [10, 14, 18, 22],
+    chartLabel: "Sales enquiries by week", weeks: [10, 14, 18, 22], chartMax: 24,
     salesLabel: "Sales from 8 jobs booked", sales: "KSh 360,000",
     directCostLabel: "Cost of completing those jobs", directCost: "− KSh 250,000",
     remainder: "KSh 58,000",
@@ -56,10 +56,9 @@ function showExample(channel) {
     document.getElementById(id).textContent = example[key];
   }
   document.getElementById("expense-spend").textContent = "− " + example.spend;
-  const ceiling = Math.ceil(Math.max(...example.weeks) / 8) * 8;
   chart.setAttribute("aria-label", example.chartLabel + ": " + example.weeks.join(", "));
   for (const [index, bar] of Array.from(chart.children).entries()) {
-    bar.style.height = (example.weeks[index] / ceiling) * 100 + "%";
+    bar.style.height = (example.weeks[index] / example.chartMax) * 100 + "%";
     bar.firstElementChild.textContent = example.weeks[index];
   }
   for (const button of channels) {
